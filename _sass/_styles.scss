@@ -1,15 +1,6 @@
 // all custom styles for the site
 
 
-body {
-  background-color: $se-light-grey;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../img/bg/bg.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 // ---------- Section styles ----------
 
 .invert-text { color: $white; }
@@ -47,4 +38,113 @@ body {
 
   &--solid { color: white; border: 0; background-color: $se-orange; }
   &--large { font-size: 1.2em; padding: .5em 3em; }
+}
+
+
+// ---------- Section styles ----------
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: $z-background;
+  background: $se-dark-grey center no-repeat;
+  background-image: url('../img/bg/bg.jpg');
+  background-size: cover;
+}
+
+.logos {
+  > * {
+    vertical-align: middle;
+    line-height: 0;
+  }
+}
+
+.logo {
+  padding: 1em;
+  @include bp(medium){
+    padding: 1.25em 1.5em;
+  }
+  @include bp(xxxlarge){
+    padding: 1.5em 2.2em;
+  }
+  & + & {
+    border-left: 1px solid $white-5;
+  }
+}
+
+.intro {
+  height: 600px;
+  padding-top: 100px;
+  color: $white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  .flexbox & {
+    display: flex;
+    justify-content: flex-start;
+    height: 75%;
+    padding-top: 0;
+  }
+}
+
+.page {
+  padding: $margin;
+  background-color: $white;
+  box-shadow: 0px 0px 42.4px 10.6px rgba(0, 0, 0, 0.1);
+  @include bp(large){
+    padding: ($margin*1.2);
+  }
+  @include bp(xxlarge){
+    padding: ($margin*1.8);
+    margin-bottom: ($margin*2);
+  }
+  @include bp(xxxlarge){
+    border-radius: 4px;
+  }
+}
+
+.form {
+  margin-top: 1.2em;
+  border: solid 1px #e8e6e3;
+  background: #fff url('../img/icons/loading.gif') center no-repeat;
+  background-size: 16px;
+  overflow: hidden;
+}
+
+
+// ---------- minium height for header ----------
+
+@media (max-height:550px) {
+  .intro,
+  .flexbox .intro {
+    height: 450px;
+    padding-top: 25px;
+  }
+  .background,
+  .flexbox .background {
+    height: 500px;
+  }
+}
+
+
+// ---------- logos ----------
+
+.logo {
+  display: inline-block;
+  &--secret-escapes{
+    margin-top: 4px;
+  }
+   > img {
+    max-width: 80px;
+    @include bp(medium){
+      max-width: 120px;
+    }
+    @include bp(xxxlarge){
+      max-width: 140px;
+    }
+  }
 }
