@@ -9,7 +9,7 @@ $susy:(
   global-box-sizing: border-box,
   gutters: 0,
 );
-$gutters:( gutters: 1 / 2, );
+$gutters:( gutters: 1, );
 $margin: 2em;
 
 
@@ -47,12 +47,15 @@ section {
   }
 }
 
-.row__column + .row__column {
-  margin-top: ( $margin / 2 );
-  @include bp(large) {
-    margin-top: 0;
+.row [class*="gutter"] {
+  .row__column + .row__column {
+    margin-top: $margin;
+    @include bp(large) {
+      margin-top: 0;
+    }
   }
 }
+
 
 
 // -------- two col grid mixin --------

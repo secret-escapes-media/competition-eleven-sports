@@ -1,7 +1,7 @@
 # Site settings
 title: eleven-sports
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi veniam voluptatibus totam accusantium laborum quo dolore.
+  Calling all Premier League fans! Eleven Sports has teamed up with luxury travel experts Secret Escapes to give away a five-star stay, every matchweek, until the end of the season. For your chance to win one of 15 getaways, submit your details on the weekly competition entry page below. It's that simple!
 baseurl: "/eleven-sports" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 

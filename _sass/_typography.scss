@@ -5,7 +5,7 @@
 
 $core-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 $main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$title-font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+$title-font-family: 'Oswald', 'Arial Narrow', sans-serif;
 
 html { font-size:62.5%; }
 body,
@@ -100,7 +100,7 @@ hr {
   border: 0;
   height: 1px;
   background-color: $light-grey;
-  margin: $margin 0;
+  margin: ($margin * 2) 0;
 }
 
 .line-length { max-width: $xxlarge; }
