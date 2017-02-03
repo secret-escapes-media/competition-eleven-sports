@@ -1,0 +1,32 @@
+/*
+  these are the styles to be uploaded into strutta
+  they will strip all of the elements down and leave just the basic form
+  this css loads after the main css so !important needed for things
+*/
+
+.age-restriction { background-color: transparent; }
+.promotion-wrapper { padding-top: 0 !important; padding-bottom: 0 !important; }
+.promotion-footer-links:nth-child(2) { display:none; }
+form label { font-size: 14px; color: #4b4b4b; }
+
+a { color: #0b3d75 ; }
+a:hover { color: #52759e ; }
+
+.btn-primary {
+  transition: all 200ms;
+  background-color: #e62533 ;
+  border: 0;
+  padding: 10px 30px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  margin: 20px auto;
+  border-radius: 3px;
+}
+.btn-primary:hover { background-color: #ca101e ; }
+
+form select,
+.form-control { border-width: 1px; height: 30px; }
+
+.promotion-footer-links { text-align: center !important; }
+.promotion-footer-links a { color: #0b3d75 ; }
+.promotion-footer-links a:hover { color: #52759e ; }

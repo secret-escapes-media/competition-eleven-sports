@@ -5,7 +5,7 @@
 
 $core-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 $main-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-$title-font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+$title-font-family: 'Oswald', 'Helvetica Neue', sans-serif;
 
 html { font-size:62.5%; }
 body,
@@ -32,6 +32,8 @@ input, textarea, keygen, select, button {
   }
   &--extra-margin { margin-top: 1.5em; }
   &--sub-heading { margin-top: 0 !important; }
+  &--shadow {text-shadow: 0 3px 50px rgba(63, 141, 162, 0.33)}
+  &--black {color: $text-title;}
 
   &--light     { font-weight: 200; }
   &--bold      { font-weight: 500; }
@@ -59,9 +61,9 @@ input, textarea, keygen, select, button {
   &--tiny        { font-size: 1.44em; }
   &--micro       { font-size: 1.2em; }
   @include bp(xxlarge){
-    &--largest     { font-size: 8em; }
-    &--larger      { font-size: 6em; }
-    &--large       { font-size: 4em; }
+    &--largest     { font-size: 6em; }
+    &--larger      { font-size: 5em; }
+    &--large       { font-size: 4.5em; }
     &--medium      { font-size: 2.933em; }
     &--small       { font-size: 2.467em; }
     &--smaller     { font-size: 2.25em; }
@@ -73,6 +75,7 @@ input, textarea, keygen, select, button {
     font-size: 1.25em;
     line-height: 1.25;
   }
+  &--small { font-size: .85em; }
   &--large { font-size: 1.05em; }
   @include bp(large){
     &--lead { font-size: 1.467em; }
@@ -99,3 +102,5 @@ hr {
   background-color: $light-grey;
   margin: $margin 0;
 }
+
+.line-length { max-width: $xxlarge; }

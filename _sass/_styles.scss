@@ -25,18 +25,22 @@
 .btn {
   @include transition;
   display:inline-block;
-  padding: .5em 1.5em;
-  border: 1px solid $se-orange;
+  padding: .5em 2em;
+  border: 1px solid $partner-primary;
   font-weight: 500;
-  border-radius: 10em;
+  border-radius: 5px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
   &:hover {
     color: white;
-    background-color: $se-orange;
+    background-color: darken($partner-primary,5);
+    border-color:     darken($partner-primary,5);
     text-decoration: none;
+    transform: scale(1.1);
   }
   * + & { margin-top: 1em; }
 
-  &--solid { color: white; border: 0; background-color: $se-orange; }
+  &--solid { color: white; border: 0; background-color: $partner-primary; }
   &--large { font-size: 1.2em; padding: .5em 3em; }
 }
 
@@ -63,17 +67,32 @@
 }
 
 .logo {
-  padding: 1em;
+  padding: .833em 1em;
   @include bp(medium){
-    padding: 1.25em 1.5em;
-  }
-  @include bp(xxxlarge){
-    padding: 1.5em 2.2em;
+    padding: 1em 1.5em;
   }
   & + & {
     border-left: 1px solid $white-5;
   }
+  display: inline-block;
+  > img {
+    max-width: 80px;
+    @include bp(medium){
+      max-width: 120px;
+    }
+  }
+  &--secret-escapes{
+    margin-top: 4px;
+    > img {
+      max-width: 100px;
+      @include bp(medium){
+        max-width: 140px;
+      }
+    }
+  }
 }
+// ---------- logos ----------
+
 
 .intro {
   height: 600px;
@@ -131,20 +150,3 @@
 }
 
 
-// ---------- logos ----------
-
-.logo {
-  display: inline-block;
-  &--secret-escapes{
-    margin-top: 4px;
-  }
-   > img {
-    max-width: 80px;
-    @include bp(medium){
-      max-width: 120px;
-    }
-    @include bp(xxxlarge){
-      max-width: 140px;
-    }
-  }
-}
